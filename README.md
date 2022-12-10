@@ -41,7 +41,7 @@ Here are the main folders in the github data-512-project-common-analysis reposit
 ## Snapshot of analysis output
 
 #### Rate of New Covid Cases with the Mask Policies in Maricopa County, AZ
-![Rate of New Covid Cases with the Mask Policies in Maricopa, AZ](part1_visualization.png) 
+![Rate of New Covid Cases with the Mask Policies in Maricopa, AZ](images/part1_visualization.png) 
 
 The visualization shows the change points in the time series data for changes in daily confirmed cases data in Maricopa county in Arizona state in the United States. The X-axis represents the day of the data point. The Y-axis represents the daily infection rate change. The X-axis essentially did not require any pre-processing as the data available seemed complete and accurate. The Y-axis was derived using the confirmed cases data provided by John Hopkins Hospital. We took this value, then calculated the daily infection rate change by calculating the change/slope over the cumulative cases given by the data. The colors of the data points show the national-level masking policy by the CDC (as indicated in the legends) and the blue vertical lines indicate the change points calculated using the Pelt Search method. The best way to read the graph for the viewer is to go from left to right and see how a change in masking policy was causing a change point in the data after almost 1 month in at least 2 instances. The graph is also indicative of the fact that the CDC changed the policies to less strict ones when these infection rate changes were negative and more strict ones when the other way round. 
 
