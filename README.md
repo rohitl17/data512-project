@@ -17,9 +17,51 @@ Count Assigned: Maricopa County, Arizona, United States
 The data for this project is extracted has different aspects and way of collection. One source is CDC for county specific information, other John Hopkins with confirmed cases data shared on Kaggle and other is New York Times Survey data.
 
 #### Dataset Sources
-- The RAW_us_confirmed_cases.csv file from the Kaggle repository of John Hopkins University COVID-19 data. This data is updated daily and recent version is used
-- The CDC dataset of masking mandates by county. Note that the CDC stopped collecting this policy information in September 2021.
-- The New York Times mask compliance survey data.  
+Following are the datasets that we plan to use for all of the questions mentioned above.
+1. Covid-19 data:
+We plan to use the COVID-19 dataset as provided in the Common Analysis part.
+a. John Hopkins University COVID-19 data (License: Attribution 4.0 International (CC BY
+4.0))
+b. Masking mandates by county (NCHS: Can be used for Statistical reporting and analyses)
+c. The New York Times mask compliance survey data (Copyright 2021 by The New York
+Times Company, used for non-commercial purposes)
+2. Federal Reserve Economic Data, FRED Monthly Data:
+The dataset is licensed under FRED® Services General License and is allowed to be used none
+other than for statistical analysis purposes. This dataset has data points starting from 1990 to
+2022 for unemployment rates, Civilian Labor Force participation, and housing parameters(Active
+Listing, Pricing). It is a two-dimensional dataset with timestamps and the respective measures in
+either case. We plan to understand the effect of the pandemic (COVID-19 cases) on these three
+measures. It helps in answering questions 1 and 4.
+The links to the dataset are as follows:
+a. Unemployment Rates in Maricopa County
+b. Civilian Labor Force (Total employed)
+c. Housing impact: We study the different aspects of the housing sector (Active listing, total
+listing, and pricing)
+3. CDC’s Agency for Toxic Substances and Disease Registry Data:
+This dataset keeps a track of the social vulnerability of counties given the diseases or abuse of
+toxic substances. Social Vulnerability Index (SVI) indicates the relative vulnerability of every U.S.
+Census tract. Census tracts are subdivisions of counties for which the Census collects statistical
+data. SVI ranks the tracts on 16 social factors, including unemployment, racial and ethnic
+minority status, and disability. We have the index values for all of these themes.
+The National Center for Health Statistics (NCHS), and Centers for Disease Control and Prevention
+(CDC), conduct statistical and epidemiological activities under the authority granted by the
+Public Health Service Act. NCHS survey data are protected by Federal confidentiality laws
+including Section 308(d) Public Health Service Act and the Confidential Information Protection
+DATA 512: Human-Centered Data Science (Extension Plan) 2
+Socioeconomic Impact of COVID-19 (Maricopa County, AZ) Rohit Lokwani
+and Statistical Efficiency Act or CIPSEA. These confidentiality laws state the data collected by
+NCHS may be used only for statistical reporting and analysis.
+Since it is the annual patterned data we use it to answer our 2nd question about the state of the
+socioeconomic variables before the pandemic and after the pandemic. Median household
+income and Gross Domestic Product, Education, and Poverty Estimates in different groups. The
+dataset can be found in United States Counties.
+4. Argonne National Laboratory Data for Different Sector Information
+This dataset contains the indexes for different industrial sectors across the country. We use it to
+research question 3. Since this dataset is available from January 2020-April 2022. We will be able
+to study the impact from almost the start of the pandemic. The data is spread out monthly for
+each of the counties as the index column and different sectors as the subindex. This dataset is
+again allowed to be used only for Statistical Analysis purposes and is licensed under DEAR
+970.5204. The link for the dataset is US Counties Economic Information.
 
 
 ## Issues and Special Considerations
