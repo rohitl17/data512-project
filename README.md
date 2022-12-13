@@ -22,7 +22,7 @@ The five main research questions that we answer using this analysis are:
 5. What are the other factors that help measure the overall community risk for similar epidemics/pandemics in the future? 
 
 
-## Datasource Information (Source and License)
+## Datasource Information (Description, Source and License)
 
 Following are the datasets that we used for all of the questions mentioned above.
 1. Covid-19 data: 
@@ -64,6 +64,29 @@ Here are the main folders in the github data-512-project-common-analysis reposit
 ```
 
 ## Results/Findings
+1. Masking Policies vs COVID-19 cases: 
+we see that the mask policies were changed during the increase in cases or when they just started to drop. The masking policies did actually help show some difference in daily infection rate reduction with almost a month’s delay. One important thing to note here, is we do not consider hospitalizations, herd immunity, recovery, or other implicit factors in our analysis. One interesting finding is that after vaccines (Late December 2020) were available, the CDC changed to a closed-space masking policy but still saw an increase in cases reason being people traveling across states during Christmas and New Year. But as we see the 4 months following that had stricter masking policies but with more people getting vaccinated the infection rates dropped and masking policies were made less strict. In summary, if we stick to the timeframe of our research question from February 1, 2020, to 1st October 2021, we see that masking had some impact on daily infection rates with a 1-month delay. This delay includes infection, COVID-19 reports, and case count actually fed-to-database delay.
+
+2. Impact of COVID-19 cases on unemployment and Civil Labor Force
+We did a direct correlation of COVID-19 cases against the unemployment rate and civilian labor force. But did not find any direct correlation. For a time-lagged correlation, we see some moderate-to-high correlation between unemployment (-0.57) and the civilian labor force (0.67) against COVID-19 cases. Labor force participation is important as it tells you about the employed and unemployed people in the general populace apart from people with privileged jobs. Overall, these findings inform us of the gradual impact of COVID-19 on people’s jobs and willingness to work.
+
+3. Immediate Impact of COVID-19
+3.1 Education (Percentage of people with degrees)
+We use the data from 2008 to 2020 for this analysis. We see that there was no particular change in the increasing trend of the percentage of degrees obtained by the people before the pandemic and at the start of the pandemic. One of the reasons could be that these degrees are mostly more than 1-year degrees and the graduation dates are usually over the summer (June). Hence, assuming COVID-19 started to hit at the start of January, 6 months Is a very short time to gauge any impact, this can be seen as the limitation of the data. But as an immediate impact of COVID-19, there wasn’t a case of people dropping out immediately at the first sight of COVID-19.
+
+3.2 Change in GDP
+We see that the slope changes quite a bit from 2019-2020 as compared to the timeline previous to that. This shows that COVID-19 had started impacting the GDP in some manner, at least showing some slowdown in the economy if not showing a downturn.
+
+3.3 Change in median household income 
+Household income is used by economists to arrive at conclusions about the economic health of a given county. We do not see any difference in the trends for it. We see that the household income was stable for the most part of 2020. Although, that is surprising because of the shutdowns in the country this value could have changed unless it equally affected the people in the lower part or the higher part of the distribution. 
+
+4. Gradual Impact of COVID-19
+In this experiment, we tried collating the industries and understanding how they were affected by the increase or decrease in COVID-19 cases. We saw that they did show some moderate-to-strong lagged cross-correlation with COVID-19 cases. The results are interpreted as Agriculture, Forestry, Fishing, and Hunting had a crosscorrelation of -0.7621 with COVID-19 cases with a lag of 18 months. So if the COVID-19 cases increase by 100% then there would be a 76.21% reduction in employment 18 months down the line. We can interpret the results for other industries similarly. 
+
+5. Overall impact
+We find a correlation between the economic index and with value added by the industry. We see value added against the percentage change in unemployment. Both of these experiments show a very strong correlation without lag (0.97 and 0.99) respectively. 
+
+We then predict overall community risk prediction using five indexes and get that these specific indexes show how important they are in predicting the overall community risk. Per unit change, the socioeconomic index showed a change of 0.43 overall community risk index keeping all other variables constant. Similarly, the model’s results can be interpreted for others, the county economic index, minority status/ language index, and housing stability index. There would be certain factors having some sort of correlation with these respective indexes, which is a part of the future part of the analysis. We tried exploring the first two here. We get the mean absolute percentage error of the overall community risk (measured on a scale of 0 to 5) as 0.07% which is fairly accurate.
 
 
 ## Conclusion
