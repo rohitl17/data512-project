@@ -72,7 +72,6 @@ Here are the main folders in the github data-512-project-common-analysis reposit
 │   │       CLF_trends.png
 │   │       CLF_Unemployment_boxplot.png
 │   │       COVID_19_cases.png
-│   │       dummy.txt
 │   │       EconomicIndex_trends.png
 │   │       Economic_value.png
 │   │       Percent_Employment_trends.png
