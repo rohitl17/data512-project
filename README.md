@@ -1,67 +1,34 @@
 # data512-project
 This repository contains the final project for DATA 512: Human Centered Data Science at UW.
 
-## Goal
-
-We have all been affected by a worldwide pandemic for the past three years. This has had a terrible and disruptive impact on many nations and has had a significant negative personal impact on many people and their families.
-
-The datafication of the pandemic is one feature that has been difficult to ignore during the past three years. In other words, a lot of information on the pandemic's personal cost has been gathered, combined, and presented as data. With the help of this data, we have the opportunity to investigate the pandemic from a variety of prospective angles in order to comprehend how it has affected individuals as well as society. To be completely honest, we are just now beginning to understand and appreciate these effects.
-
-By completing a human-centered data science study of the existing COVID-19 data, we aim to look at some of the social dimensions of the pandemic throughout this course project. Every student in the course will use the same datasets for Part 1: Common Analysis. Students will be given the task of analyzing data for a single US county.
-
 Count Assigned: Maricopa County, Arizona, United States
 
+## Goal
 
-## Datasource Information
+COVID-19 has had a massive impact on the world in the last couple of years. The rapid spread of COVID-19 endangered lives, disrupted livelihoods, and impacted global trade, the economy, and businesses. The world economy had started to experience significant disruptions and was and is still moving toward a severe recession and an unprecedented economic crisis. All nations have experienced challenges as a result of COVID-19, but many nations have had to deal with a more difficult situation because of their large populations, subpar health services, high rates of poverty, poor socioeconomic conditions, and inadequate social protection systems. According to Dr. William Cockerham, the Chief Sociologist at the University of Alberta, he says “Socioeconomic status is the strongest indicator of health, disease resistance and longevity in medical sociology”. We try to corroborate his theory in our analysis.
 
-The data for this project is extracted has different aspects and way of collection. One source is CDC for county specific information, other John Hopkins with confirmed cases data shared on Kaggle and other is New York Times Survey data.
+The UN’s Framework for the Immediate Socio-Economic Response to the COVID-19 Crisis warned that “The COVID-19 pandemic is far more than a health crisis: it is affecting societies and economies at their core. While the impact of the pandemic will vary from country to country, it will most likely increase poverty and inequalities on a global scale.”.  To educate and customize government and partner responses to the COVID-19 issue and ensure that no one is left behind in this effort, it is essential to assess the implications of the crisis on communities, economies, and vulnerable people. These factors can directly affect the ability to earn, the representation of race or caste in society, education, etc.
 
-#### Dataset Sources
-Following are the datasets that we plan to use for all of the questions mentioned above.
-1. Covid-19 data:
-We plan to use the COVID-19 dataset as provided in the Common Analysis part.
-a. John Hopkins University COVID-19 data (License: Attribution 4.0 International (CC BY
-4.0))
-b. Masking mandates by county (NCHS: Can be used for Statistical reporting and analyses)
-c. The New York Times mask compliance survey data (Copyright 2021 by The New York
-Times Company, used for non-commercial purposes)
+Hence, how did the pandemic impact such factors interest us the most? For this analysis, we target the socioeconomic factors primarily but focus mainly on economic ones. We try to do a fine-grained analysis of the socioeconomic implications of COVID-19 in Maricopa County, Arizona in the United States. We understand the implications at the individual level and industry level. The broader level question that this analysis tries to answer is: 
+What were the immediate and gradual impacts of COVID-19 on socioeconomic factors at the community and industrial level in Maricopa County in Arizona?
+
+
+## Datasource Information (Source and License)
+
+Following are the datasets that we used for all of the questions mentioned above.
+1. Covid-19 data: 
+We use the COVID-19 masking dataset as provided in the Common Analysis part (Question 1). The COVID-19 cases dataset is used for all the questions. a) John Hopkins University COVID-19 data (License: Attribution 4.0 International (CC BY 4.0)). b) Masking mandates by county (NCHS: Can be used for Statistical reporting and analyses)
+c) The New York Times mask compliance survey data (Copyright 2021 by The New York Times Company, used for non-commercial purposes)
+
 2. Federal Reserve Economic Data, FRED Monthly Data:
-The dataset is licensed under FRED® Services General License and is allowed to be used none
-other than for statistical analysis purposes. This dataset has data points starting from 1990 to
-2022 for unemployment rates, Civilian Labor Force participation, and housing parameters(Active
-Listing, Pricing). It is a two-dimensional dataset with timestamps and the respective measures in
-either case. We plan to understand the effect of the pandemic (COVID-19 cases) on these three
-measures. It helps in answering questions 1 and 4.
-The links to the dataset are as follows:
-a. Unemployment Rates in Maricopa County
-b. Civilian Labor Force (Total employed)
-c. Housing impact: We study the different aspects of the housing sector (Active listing, total
-listing, and pricing)
+The dataset is licensed under FRED® Services General License and is allowed to be used none other than for statistical analysis purposes. This dataset has data points starting from 1990 to 2022 for unemployment rates, Civilian Labor Force participation. It is a two-dimensional dataset with timestamps and the respective measures in either case. We understand the effect of the pandemic (COVID-19 cases) on these two measures. It helps in answering question 2.
+
 3. CDC’s Agency for Toxic Substances and Disease Registry Data:
-This dataset keeps a track of the social vulnerability of counties given the diseases or abuse of
-toxic substances. Social Vulnerability Index (SVI) indicates the relative vulnerability of every U.S.
-Census tract. Census tracts are subdivisions of counties for which the Census collects statistical
-data. SVI ranks the tracts on 16 social factors, including unemployment, racial and ethnic
-minority status, and disability. We have the index values for all of these themes.
-The National Center for Health Statistics (NCHS), and Centers for Disease Control and Prevention
-(CDC), conduct statistical and epidemiological activities under the authority granted by the
-Public Health Service Act. NCHS survey data are protected by Federal confidentiality laws
-including Section 308(d) Public Health Service Act and the Confidential Information Protection
-DATA 512: Human-Centered Data Science (Extension Plan) 2
-Socioeconomic Impact of COVID-19 (Maricopa County, AZ) Rohit Lokwani
-and Statistical Efficiency Act or CIPSEA. These confidentiality laws state the data collected by
-NCHS may be used only for statistical reporting and analysis.
-Since it is the annual patterned data we use it to answer our 2nd question about the state of the
-socioeconomic variables before the pandemic and after the pandemic. Median household
-income and Gross Domestic Product, Education, and Poverty Estimates in different groups. The
-dataset can be found in United States Counties.
-4. Argonne National Laboratory Data for Different Sector Information
-This dataset contains the indexes for different industrial sectors across the country. We use it to
-research question 3. Since this dataset is available from January 2020-April 2022. We will be able
-to study the impact from almost the start of the pandemic. The data is spread out monthly for
-each of the counties as the index column and different sectors as the subindex. This dataset is
-again allowed to be used only for Statistical Analysis purposes and is licensed under DEAR
-970.5204. The link for the dataset is US Counties Economic Information.
+This dataset keeps a track of the social vulnerability of counties given the diseases or abuse of toxic substances. Social Vulnerability Index (SVI) indicates the relative vulnerability of every U.S. Census tract. Census tracts are subdivisions of counties for which the Census collects statistical data. SVI ranks the tracts on 16 social factors, including unemployment, racial and ethnic minority status, and disability. We have the index values for all of these themes.
+The National Center for Health Statistics (NCHS), and Centers for Disease Control and Prevention (CDC), conduct statistical and epidemiological activities under the authority granted by the Public Health Service Act. NCHS survey data are protected by Federal confidentiality laws including Section 308(d) Public Health Service Act and the Confidential Information Protection and Statistical Efficiency Act or CIPSEA. These confidentiality laws state the data collected by NCHS may be used only for statistical reporting and analysis. Since it is the annual patterned data we use it to answer our 3rd and 5th question about the state of the socioeconomic variables before the pandemic and after the pandemic. Median household income and Gross Domestic Product, Education, and Poverty Estimates in different groups. The dataset can be found in United States Counties. 
+
+4. Argonne National Laboratory Data for Different Sector Information:
+This dataset contains the indexes for different industrial sectors across the country. We use it to research question 4. Since this dataset is available from January 2020-April 2022. We will be able to study the impact from almost the start of the pandemic. The data is spread out monthly for each of the counties as the index column and different sectors as the subindex. This dataset is again allowed to be used only for Statistical Analysis purposes and is licensed under DEAR 970.5204. The link for the dataset is US Counties Economic Information.
 
 
 ## Issues and Special Considerations
