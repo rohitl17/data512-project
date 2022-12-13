@@ -96,6 +96,22 @@ Here are the main folders in the github data-512-project-common-analysis reposit
         unemployed_population.csv
 ```
 
+## Intermediate Data descriptions
+
+We do not include the input data files in the repository since they are very large and cannot be uploaded to Github because of storage limits. We generate intermediate CSVs for analysis and upload them in the intermediate data.
+1. civilian_labor_force_population.csv : CSV with Civilian Labor Force participation by month (Used for answering question 2)
+2. County_by_Industry.csv : Maricopa industries economic data (Used for answering question 4)
+3. COVID_cases_by_month.csv : Maricopa Case rates by month (Used for answering question 1)
+4. Economic_data_maricopa.csv : Maricopa overall economic data (Used for answering question 5)
+5. Education_Associate.csv : Percent of people with associate degrees by year (Used for answering question 3)
+6. Education_bachelors.csv : Percent of people with bachelors degrees by year (Used for answering question 3)
+7. Education_highschool.csv : Percent of people with high school degrees by year (Used for answering question 3)
+8. GDP_trends.csv : US Annual GDP (Used for answering question 3)
+9. household_income.csv : Annual Median Household income (Used for answering question 3) 
+10. unemployed_population.csv : Monthly unemployment rate - Maricopa (Used for answering question 2)
+
+
+
 ## Results/Findings
 1. Masking Policies vs COVID-19 cases: 
 we see that the mask policies were changed during the increase in cases or when they just started to drop. The masking policies did actually help show some difference in daily infection rate reduction with almost a month’s delay. One important thing to note here, is we do not consider hospitalizations, herd immunity, recovery, or other implicit factors in our analysis. One interesting finding is that after vaccines (Late December 2020) were available, the CDC changed to a closed-space masking policy but still saw an increase in cases reason being people traveling across states during Christmas and New Year. But as we see the 4 months following that had stricter masking policies but with more people getting vaccinated the infection rates dropped and masking policies were made less strict. In summary, if we stick to the timeframe of our research question from February 1, 2020, to 1st October 2021, we see that masking had some impact on daily infection rates with a 1-month delay. This delay includes infection, COVID-19 reports, and case count actually fed-to-database delay.
