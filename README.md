@@ -54,13 +54,47 @@ We initially proposed trying to build the models that could have been much more 
 ## Repository Structure
 Here are the main folders in the github data-512-project-common-analysis repository:
 ```bash
-
-├── README.md
-├── LICENSE
-├── part1_visualization.png
-├── Part_1_CommonAnalysis_RohitLokwani.ipynb
-├── Part1_VisualizationExplanation.pdf
-├── Part1_Reflection_Statement.pdf
+│   Final_Project_Notebook.ipynb
+│   LICENSE
+│   Part_1_CommonAnalysis_RohitLokwani.ipynb
+│   README.md
+│   requirements.txt
+|
+├───documentation
+│       Part1_Reflection_Statement.pdf
+│       Part1_VisualizationExplanation.pdf
+│       Part2_DATA512Project_ ExtensionPlan.pdf
+│       Part3_ProjectPresentation.pdf
+│       Part4_DATA512ProjectReport_RohitLokwani.pdf
+│
+├───images
+│   ├───EDA
+│   │       CLF_trends.png
+│   │       CLF_Unemployment_boxplot.png
+│   │       COVID_19_cases.png
+│   │       dummy.txt
+│   │       EconomicIndex_trends.png
+│   │       Economic_value.png
+│   │       Percent_Employment_trends.png
+│   │       Unemployment_trends.png
+│   │
+│   └───plots
+│           Education.png
+│           GDP.png
+│           Household_income.png
+│           part1_visualization.png
+│
+└───intermediate_data
+        civilian_labor_force_population.csv
+        County_by_Industry.csv
+        COVID_cases_by_month.csv
+        Economic_data_maricopa.csv
+        Education_Associate.csv
+        Education_bachelors.csv
+        Education_highschool.csv
+        GDP_trends.csv
+        household_income.csv
+        unemployed_population.csv
 ```
 
 ## Results/Findings
