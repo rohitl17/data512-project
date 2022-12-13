@@ -70,7 +70,7 @@ we see that the mask policies were changed during the increase in cases or when 
 2. Impact of COVID-19 cases on unemployment and Civil Labor Force
 We did a direct correlation of COVID-19 cases against the unemployment rate and civilian labor force. But did not find any direct correlation. For a time-lagged correlation, we see some moderate-to-high correlation between unemployment (-0.57) and the civilian labor force (0.67) against COVID-19 cases. Labor force participation is important as it tells you about the employed and unemployed people in the general populace apart from people with privileged jobs. Overall, these findings inform us of the gradual impact of COVID-19 on people’s jobs and willingness to work.
 
-3. Immediate Impact of COVID-19
+3. Immediate Impact of COVID-19: 
 3.1 Education (Percentage of people with degrees)
 We use the data from 2008 to 2020 for this analysis. We see that there was no particular change in the increasing trend of the percentage of degrees obtained by the people before the pandemic and at the start of the pandemic. One of the reasons could be that these degrees are mostly more than 1-year degrees and the graduation dates are usually over the summer (June). Hence, assuming COVID-19 started to hit at the start of January, 6 months Is a very short time to gauge any impact, this can be seen as the limitation of the data. But as an immediate impact of COVID-19, there wasn’t a case of people dropping out immediately at the first sight of COVID-19.
 
