@@ -3,7 +3,7 @@ This repository contains the final project for DATA 512: Human Centered Data Sci
 
 Count Assigned: Maricopa County, Arizona, United States
 
-## Goal
+## Goal/Motivation
 
 COVID-19 has had a massive impact on the world in the last couple of years. The rapid spread of COVID-19 endangered lives, disrupted livelihoods, and impacted global trade, the economy, and businesses. The world economy had started to experience significant disruptions and was and is still moving toward a severe recession and an unprecedented economic crisis. All nations have experienced challenges as a result of COVID-19, but many nations have had to deal with a more difficult situation because of their large populations, subpar health services, high rates of poverty, poor socioeconomic conditions, and inadequate social protection systems. According to Dr. William Cockerham, the Chief Sociologist at the University of Alberta, he says “Socioeconomic status is the strongest indicator of health, disease resistance and longevity in medical sociology”. We try to corroborate his theory in our analysis.
 
@@ -11,6 +11,15 @@ The UN’s Framework for the Immediate Socio-Economic Response to the COVID-19 C
 
 Hence, how did the pandemic impact such factors interest us the most? For this analysis, we target the socioeconomic factors primarily but focus mainly on economic ones. We try to do a fine-grained analysis of the socioeconomic implications of COVID-19 in Maricopa County, Arizona in the United States. We understand the implications at the individual level and industry level. The broader level question that this analysis tries to answer is: 
 What were the immediate and gradual impacts of COVID-19 on socioeconomic factors at the community and industrial level in Maricopa County in Arizona?
+
+
+## Research Questions
+The five main research questions that we answer using this analysis are: 
+1. What was the effect of masking policies on the COVID-19 case count? 
+2. What was the influence of the pandemic on the unemployment rate and Civil Labor Force in the county?  
+3. How did the socioeconomic factors (Education, Median Household Income, and Gross Domestic Product) change during the early stage of the pandemic?  
+4. How did the COVID-19 cases affect the economic indexes of the county in different industries?  
+5. What are the other factors that help measure the overall community risk for similar epidemics/pandemics in the future? 
 
 
 ## Datasource Information (Source and License)
@@ -31,13 +40,16 @@ The National Center for Health Statistics (NCHS), and Centers for Disease Contro
 This dataset contains the indexes for different industrial sectors across the country. We use it to research question 4. Since this dataset is available from January 2020-April 2022. We will be able to study the impact from almost the start of the pandemic. The data is spread out monthly for each of the counties as the index column and different sectors as the subindex. This dataset is again allowed to be used only for Statistical Analysis purposes and is licensed under DEAR 970.5204. The link for the dataset is US Counties Economic Information.
 
 
-## Issues and Special Considerations
+## Issues and Special Considerations / Limitations
 
 The primary reason we use CDC guidelines as the masking policy is that the data obtained from CDC Policy Survellience shows there were no mask mandates established by the state of Arizona in any of the counties, let alone Maricopa County. The initial intuition was to use the voluntary mask data but it would be unfair to generalize the data obtained from a 2-week survey to a very large timeframe. The voluntary masking survey shows us that 73.4% of the people in Arizona always wore masks and 95% of people wore masks more than sometimes. This timeframe (July 2 - July 14) was when CDC had nationwide guidelines for wearing masks. So, technically our assumption is people in the county were following CDC guidelines religiously without a state mandate. Hence, we use CDC guidelines as the basis of the analysis. In all the datasets mentioned above, the datasets are quite clean in general. 
 
 The other concern is understanding the features accurately, which might require researching socioeconomic terminologies in order to avoid drawing incorrect conclusions. Another concern is here, we are directly correlating the variables like economic impact in industrial sectors and the effect of COVID-19, but it's important to note that these variables might be impacted by various other factors like International relations amongst others. For example, the CDC’s Agency for Toxic Substances and Disease Registry Data measure the impacts of drug consumption and diseases on the economic indexes, but we are just correlating the impact with the disease part.
 
+Some of the other limitations would include,  these results and analysis for Maricopa county in Arizona, US. These results might not hold for other counties in the country. When building the model overall community risk we added certain factors and left out some like the Local Government Revenue index as we thought they would be redundant and as they correlated highly with County Economic Index. But we think adding those features might change the predictive power of the model. Also, many times there are factors like state economic indexes which would be impacting the local index of the communities and they might have some contribution in each of the counties. We consider all the counties as independent of each other which might violate the Independence assumption of linear regression. On the other hand, the time-lagged correlation of the industries with COVID-19 cases was done on the basis of their months. We took the sum of the cases, whereas the other value is a percentage change. Although on the outside, this looks correct, a statistically more appropriate way of doing it could be the percentage change in COVID-19 cases against the percentage change in unemployment. The COVID-19 masking data we used could be incorrect as those are the CDC guidelines and not state mandates. On top of it, the masking survey data is sampled from a specific set of people, extrapolating that could be a simplification assumption that might not be right. Another limiting aspect could be that we do not gauge the long-term impact of Social factors like Education as its the limitation of data available at hand.
+
 ## Ethical Considerations
+We initially proposed trying to build the models that could have been much more complicated than the current ones. But the human-centered approach helped us pick more interpretable approaches as they result in more transparency. The data we used was also about fairness and hence used as many as communities possible over using specific communities or counties when building the overall community risk index model. Also, the design process involves ethical considerations. It uses masked data produced by the people and is free of other demographic biases. For the data leveraged by the above three methods proposed, differential privacy has been used by adding artificial noise, enabling high-quality results without identifying anyone. To further protect people's privacy, it is ensured that the study leverages no personal information or individual search queries. Finally, the proposed solution of the study is highly reproducible. The methodology proposed can be leveraged to fit any data consisting of people's searches by validating and incorporating the assumptions made in regression and correlation analysis.
 
 ## Repository Structure
 Here are the main folders in the github data-512-project-common-analysis repository:
@@ -51,19 +63,15 @@ Here are the main folders in the github data-512-project-common-analysis reposit
 ├── Part1_Reflection_Statement.pdf
 ```
 
-## Snapshot of analysis output
+## Results/Findings
 
-#### Rate of New Covid Cases with the Mask Policies in Maricopa County, AZ
-![Rate of New Covid Cases with the Mask Policies in Maricopa, AZ](images/part1_visualization.png) 
 
-The visualization shows the change points in the time series data for changes in daily confirmed cases data in Maricopa county in Arizona state in the United States. The X-axis represents the day of the data point. The Y-axis represents the daily infection rate change. The X-axis essentially did not require any pre-processing as the data available seemed complete and accurate. The Y-axis was derived using the confirmed cases data provided by John Hopkins Hospital. We took this value, then calculated the daily infection rate change by calculating the change/slope over the cumulative cases given by the data. The colors of the data points show the national-level masking policy by the CDC (as indicated in the legends) and the blue vertical lines indicate the change points calculated using the Pelt Search method. The best way to read the graph for the viewer is to go from left to right and see how a change in masking policy was causing a change point in the data after almost 1 month in at least 2 instances. The graph is also indicative of the fact that the CDC changed the policies to less strict ones when these infection rate changes were negative and more strict ones when the other way round. 
+## Conclusion
+We started with a human-centered approach to this project trying to corroborate Dr. Cockerham’s theory of socioeconomic status being the primary indicator of health and impact. We uncovered the socioeconomic impacts in immediate and gradual perspectives at the individual/community level and industry level. All of this was done keeping in mind the guidelines of code reproducibility, transparency, openness, and fairness for any analysis project. 
 
-### Detailed analysis of the visualization
-1. We see the first change point around 2020-06, which was the first peak of the pandemic, before this even if the masking policies were implemented, people were probably not very serious about it, hence strictly wearing mask policy might not have worked. But then over time masks seemed to work. (Some evidence of masking impacting cases over the longer progression)
-2. At the second set of change points, we see that when the cases were declining, the CDC changed the guidelines to less strict policy and the cases continued to decline (No real evidence of mask policy change impact on cases)
-3. At the 5th change point (2021-08), we see the mask policy was made less strict and almost a month later the cases started to rise. (Noticeable impact of masks onto the cases)
-4. At the next change point, we see that vaccines were available, and people might have reduced wearing masks which led to a rise in cases again and then the next changes would be more of due to vaccines and herd immunity over masks.
+Some of the interesting findings were: The impact of masking policies on the COVID-19 cases showed some impact with a lag of 1 month in some cases but that does not guarantee that there was any direct impact. Hence, in the absence of state mandates we use CDC mask recommendation guideline dates but do not use masking as the chief basis of this analysis. We do the correlation analysis using COVID-19 cases instead. Given its effectiveness in decreasing infection, public mask-wearing might still be an appropriate policy response to future outbreaks. Overall, the study provides suggestive evidence about the benefits of wearing masks in public during the various stages of the COVID-19 pandemic. The study also highlights the relevance of public mask-wearing for the ongoing pandemic, where the vaccination rate is precarious, and access to vaccines is still limited in many counties. 
 
-Overall, connecting the dots backwards, we could see some impact of masks on infection rates but not always as we ignore the subjective/qualitative aspects of the broader problem (vaccinations, herd immunity, recovery rates, hospitalizations)
+On the economic front, Unemployment and Civil Labor Force participation showed a time-lagged cross-correlation of 0.57 and 0.67 at 21 and 22 months respectively. We did not see any immediate impact of COVID-19 on socioeconomic factors like Median Household Income and Education. On the other hand, the GDP suggested a relative economic slowdown. The gradual impact showed Agriculture and Fisheries industry having a strong negative correlation(-0.71) with COVID-19 at a lag of 18 months amongst other industries. We see that the overall economic index, value added by the sector, and the percentage change in  employment have a very strong correlation (>0.97). We also predict the overall community risk index with a mean absolute percentage error of 0.07%. We identify the important factors that are most important in predicting that which include the Socioeconomic Index and County Economic Index followed by the Minority Status/Language Index. Overall, these findings would help us be better prepared for determining the communities at risk and the most vulnerable industries in the future.
+
     
 ### Languages used: Python
